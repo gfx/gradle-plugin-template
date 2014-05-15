@@ -1,0 +1,4 @@
+language: android
+    #- echo no | android create avd --force -n test -t 1
+    #- emulator -avd test -no-skin -no-audio -no-window &
+    #- wait_for_emulator

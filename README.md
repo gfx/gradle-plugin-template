@@ -1,4 +1,4 @@
-# A Template Project For Gradle Plugin
+# A Template Project For Gradle Plugin [![Build Status](https://travis-ci.org/gfx/gradle-plugin-template.svg)](https://travis-ci.org/gfx/gradle-plugin-template)
 
 ```
 plugin/   - The main module of a Gradle plugin
