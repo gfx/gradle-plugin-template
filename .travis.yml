@@ -1,4 +1,12 @@
 language: android
+before_install:
+    - export TERM=dumb # to get clean gradle output
+    # Create and start emulator
+    #- android list targets # for debugging
     #- echo no | android create avd --force -n test -t 1
     #- emulator -avd test -no-skin -no-audio -no-window &
     #- wait_for_emulator
+script:
+    - ./gradlew check
+    - ./gradlew lint
+    #- ./gradlew connectedAndroidTest
