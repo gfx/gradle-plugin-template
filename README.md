@@ -10,6 +10,8 @@ buildSrc/ - A helper module to use this plugin in example modules
 
 Copy `gradle.properties.sample` into `~/.gradle/gradle.properties` and set correct values.
 
+Note that `PGP_KEY_ID` is the value that `gpg --list-secret-keys` shows.
+
 # Author And License
 
 Copyright 2014, FUJI Goro (gfx) <gfuji@cpan.org>. All rights reserved.
