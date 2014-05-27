@@ -6,6 +6,10 @@ example/  - An example android application that uses this plugin
 buildSrc/ - A helper module to use this plugin in example modules
 ```
 
+# Gradle Properties
+
+Copy `gradle.properties.sample` into `~/.gradle/gradle.properties` and set correct values.
+
 # Author And License
 
 Copyright 2014, FUJI Goro (gfx) <gfuji@cpan.org>. All rights reserved.
