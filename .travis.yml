@@ -1,12 +1,15 @@
 language: android
+env:
+    - TARGET=android-19 ABI=armeabi-v7a
 before_install:
     - export TERM=dumb # to get clean gradle output
-    # Create and start emulator
-    #- android list targets # for debugging
-    #- echo no | android create avd --force -n test -t 1
-    #- emulator -avd test -no-skin -no-audio -no-window &
-    #- wait_for_emulator
+    - android list targets # for debugging
+    - echo no | android create avd --force -n test -t $TARGET -b $ABI
+    - emulator -avd test -no-skin -no-audio -no-window &
+    - ./gradlew tasks # install dependencies while the eumulator is booting
+    - curl -L https://raw.githubusercontent.com/embarkmobile/android-sdk-installer/master/wait_for_emulator | bash
 script:
-    - ./gradlew check
-    - ./gradlew lint
-    #- ./gradlew connectedAndroidTest
+    - ./gradlew --stacktrace lint
+    - ./gradlew --stacktrace connectedCheck || (adb logcat -t 100 && false)
+after_script:
+    - android delete avd -n test
