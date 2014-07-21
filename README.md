@@ -20,8 +20,8 @@ Note that `PGP_KEY_ID` is the value that `gpg --list-secret-keys` shows.
 
 ### Resources in plugin.jar
 
-Reading resources from plugin.jar is extremely unstable so you'll see a method in
-FooTask.groovy:
+Reading resources from `plugin.jar` is extremely unstable so you'll see a method in
+[FooTask.groovy](https://github.com/gfx/gradle-plugin-template/blob/master/plugin%2Fsrc%2Fmain%2Fgroovy%2Fcom%2Fgithub%2Fgfx%2Fgradle_plugin_template%2FFooTask.groovy):
 
 ```groovy
 String getResourceContent(String filename) {
